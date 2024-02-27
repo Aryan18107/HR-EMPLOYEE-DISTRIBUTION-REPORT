@@ -30,7 +30,7 @@ The data is stored in CSV format. The following steps were followed in the proje
 8. What is the tenure distribution for each department?
 
  ## **Dashboard**
-
+![HR Employee Distribution](https://github.com/Aryan18107/HR-EMPLOYEE-DISTRIBUTION-REPORT/assets/156915129/dd555229-9d74-4785-a0ae-3606d3b98e4b)
 
  ## **Project Insight**
 1. There are more male employees
