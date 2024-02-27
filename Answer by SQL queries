@@ -1,0 +1,54 @@
+-- Answers to the questions
+-- 1. SELECT gender, Count(*) AS Count
+      FROM hr
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY gender;
+
+-- 2. SELECT race, Count(*) AS Count
+      FROM HR
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY race
+      ORDER BY Count(*)DESC;
+
+-- 3. SELECT 
+      CASE
+      WHEN age >=18 AND age <= 30 THEN '18-30'
+      WHEN age >=31 AND age <= 42 THEN '31-42'
+      WHEN age >=43 AND age <= 54 THEN '43-54'
+      WHEN age >=55 AND age <= 66 THEN '55-66'
+      ELSE '67+'
+      END AS age_group,
+      count(*) AS count
+      FROM hr
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY age_group
+      ORDER BY age_group;
+
+-- 4. SELECT location, Count(*) AS Count
+      FROM hr
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY location;
+
+-- 5. SELECT
+      round(avg(datediff(termdate,hire_date))/365,0) AS avg_length_employment
+      FROM Hr
+      WHERE termdate <= curdate() AND termdate<> '0000-00-00'AND age >=18;
+
+-- 6. SELECT department,gender,Count(*) AS Count
+      FROM hr
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY department,gender
+      ORDER BY department;
+
+-- 7. SELECT location_state, Count(*) AS Count
+      FROM hr
+      WHERE age >18 AND termdate = '0000-00-00'
+      GROUP BY location_state
+      ORDER BY Count DESC;
+
+-- 8. SELECT department, round(avg(datediff(termdate,hire_date)/365),0) AS avg_tenure
+      FROM hr
+      WHERE termdate <= curdate() AND termdate<> '0000-00-00' AND age >=18
+      GROUP BY department; 
+    
+
